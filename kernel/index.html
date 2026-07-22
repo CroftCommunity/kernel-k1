@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>account-kernel K1 probe</title>
+</head>
+<body>
+  <!--
+    The kernel iframe. In the real design this is kernel.croft.ing; here it is
+    kernel.<site>. It owns storage for its own origin and exposes a tiny probe API
+    over postMessage. K1 tests whether this same origin, embedded under two different
+    same-site subdomains, sees ONE shared store (unpartitioned) or two.
+  -->
+  <p>account-kernel K1 storage probe (embed me; drive me via postMessage).</p>
+  <pre id="log"></pre>
+  <script src="kernel.js"></script>
+</body>
+</html>
